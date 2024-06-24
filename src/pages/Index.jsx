@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Trash, Edit3, CheckCircle } from "lucide-react";
+import { toast } from "sonner";
 
 function Index() {
   const [tasks, setTasks] = useState([]);
@@ -16,6 +17,7 @@ function Index() {
     if (newTask.trim() !== '') {
       setTasks([...tasks, { text: newTask, completed: false }]);
       setNewTask('');
+      toast("Task has been created.");
     }
   };
 
