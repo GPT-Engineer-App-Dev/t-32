@@ -1,11 +1,11 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Index from "./pages/Index.jsx";
 import SharedLayout from "./components/SharedLayout.jsx";
-import { ToastProvider } from "sonner";
+import { Toaster } from "sonner";
 
 function App() {
   return (
-    <ToastProvider>
+    <Toaster>
       <SharedLayout>
         <Router>
           <Routes>
@@ -13,7 +13,7 @@ function App() {
           </Routes>
         </Router>
       </SharedLayout>
-    </ToastProvider>
+    </Toaster>
   );
 }
 
